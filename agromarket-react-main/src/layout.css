@@ -1,0 +1,219 @@
+/* Сброс box model: width/height включают padding и border */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #5a7138;
+  color: #1f2a1f;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 24px;
+  background: #2d7326;
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-header > a {
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.catalog-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.catalog-toolbar input {
+  padding: 8px 12px;
+  min-width: 240px;
+  border: 1px solid #b9c4b5;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #dfe6dc;
+  border-radius: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.card h3,
+.card p {
+  margin: 0;
+}
+
+.card button {
+  margin-top: auto;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #02a00a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card--featured {
+  background: #f1f8e9;
+}
+
+.badge {
+  align-self: flex-start;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #c8e6c9;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "catalog"
+    "sidebar"
+    "contact";
+  gap: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.catalog {
+  grid-area: catalog;
+}
+
+.status-message {
+  color: #8ed694;
+}
+
+/* Переопределяем встроенный цвет ошибки, не меняя JSX. */
+.status-message[style] {
+  color: #a70800 !important;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: #fff;
+  border: 1px solid #dfe6dc;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+@media (min-width: 768px) {
+  .site-header {
+    flex-direction: row;
+  }
+
+  .nav-links {
+    gap: 24px;
+  }
+
+  .card--featured {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page {
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+      "catalog sidebar"
+      "contact contact";
+    padding: 24px;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 16px;
+    align-self: start;
+  }
+}
+
+.contact {
+  grid-area: contact;
+  background: #fff;
+  border: 1px solid #dfe6dc;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 8px;
+  max-width: 520px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 8px 12px;
+  border: 1px solid #b9c4b5;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.contact-form input:user-invalid {
+  border-color: #c62828;
+}

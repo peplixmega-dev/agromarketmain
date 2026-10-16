@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "джяйй, 1 кг",
+      "price": 550,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Image_PlaceHolder.png?utm_source=ru.wikipedia.org&utm_campaign=index&utm_content=original"
+    },
+    {
+      "id": "2",
+      "name": "дешка, 1 л",
+      "price": 500,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Image_PlaceHolder.png?utm_source=ru.wikipedia.org&utm_campaign=index&utm_content=original"
+    },
+    {
+      "id": "3",
+      "name": "кайф, 1 л",
+      "price": 500,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Image_PlaceHolder.png?utm_source=ru.wikipedia.org&utm_campaign=index&utm_content=original"
+    },
+    {
+      "id": "4",
+      "name": "мега, 1 кг",
+      "price": 500,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Image_PlaceHolder.png?utm_source=ru.wikipedia.org&utm_campaign=index&utm_content=original"
+    }
+  ]
+}
